@@ -19,11 +19,11 @@ abstract class AbstractUnit implements UnitInterface
      */
     private $valueInBaseUnit;
 
-    public function __construct(float $value, float $units)
+    public function __construct(float $value, float $units, bool $inBaseUnit=false)
     {
-        $this->value = $value;
+        $this->value = ($inBaseUnit) ? $value/$units : $value;
         $this->units = $units;
-        $this->valueInBaseUnit = $value * $units;
+        $this->valueInBaseUnit = $this->value * $units;
     }
     /**
      * @return float
