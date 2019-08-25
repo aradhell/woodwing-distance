@@ -2,7 +2,9 @@
 * [Goal](#goal)
 * [Prerequisites](#rerequisites)
 * [Requirements](#requirements)
+* [Installation](#installation)
 * [Planning](#planning)
+* [Endpoint](#endpoint)
 
 ### Goal 
 Make a web service that accepts two distances (numbers) and returns the total distance (sum of both).
@@ -16,6 +18,26 @@ For example, the request could be 3 Yards + 5 Meters = ... Meters, and the respo
 ### Requirements
 * [PHP ^7.1.3](https://www.php.net/manual/en/install.php)
 * [Composer](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md)
+
+### Installation
+```
+git clone woodwing-distance.bundle -b master
+```
+```
+cd woodwing-distance
+```
+```
+cp .env.example .env
+```
+```
+composer install
+```
+```
+php -S localhost:8000 -t public
+```
+```
+http://localhost:8000/api/v1
+```
 
 ### Planning
 1 yard = 0.9144 meter
