@@ -32,7 +32,7 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
     </php>
     <logging>
-        <log type="coverage-html" target="report/codeCoverage/" charset="UTF-8" />
+        <log type="coverage-html" target="report/codeCoverage/" />
         <log type="junit" target="report/tests.xml"/>
         <log type="coverage-clover" target="report/clover.xml"/>
     </logging>
