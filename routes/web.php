@@ -11,6 +11,14 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->group(['prefix' => 'api', 'namespace' => 'Api'], function() use ($router)
+{
+    $router->group(['prefix' => 'v1', 'namespace' => 'v1'], function() use ($router) {
+        $router->post('/', [
+            'as' => 'calculate', 'uses' => 'DistanceController@calculate'
+        ]);
+        $router->get('/', [
+            'as' => 'calculate', 'uses' => 'DistanceController@calculate'
+        ]);
+    });
 });

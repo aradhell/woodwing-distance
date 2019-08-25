@@ -8,7 +8,7 @@ class ApiTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->defaultPrecision = 2;
+        $this->defaultPrecision = (int)getenv("DEFAULT_CALCULATION_PRECISION");
     }
 
     /**
