@@ -12,5 +12,5 @@ class MeterTest extends \TestCase
         $this->assertEquals(5, $meter->getValue());
         $this->assertEquals(5, $meter->getValueInBaseUnit());
     }
-    
+
 }
